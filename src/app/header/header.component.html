@@ -1,0 +1,342 @@
+
+
+<header class="flex items-center justify-between bg-gray light:bg-white px-5 md:px-8 lg:px-4 2xl:px-12 h-[5.2rem] md:h-32 border-b border-slate-200  dark:border-b dark:border-b-gray-700 mx-auto max-w-[1920px]">
+  <!--  start dark mode , search box , log in  -->
+  <div class="flex items-center gap-x-5 h-14">
+
+    <!--   start user      -->
+    <div class="block  lg:hidden">
+      <a routerLink="/login">
+        <div class="w-[3rem] h-[3rem]  rounded-full border border-gray-700">
+        </div>
+      </a>
+    </div>
+    <!--    end user    -->
+
+    <!-- start login  -->
+    <div class="hidden lg:block">
+      <a>
+        <div class="flex justify-between lg:w-[9rem] xl:w-[11rem] h-[3.5rem] bg-[#FFDEAD] rounded-[30px]">
+          <div class="lg:w-[5rem] xl:w-[6.9rem] h-[3.5rem] bg-[#A96400] rounded-[30px]  pl-4 xl:pl-6 pt-4">
+            <a class=" lg:text-[1rem] xl:text-[1.1rem] font-bold" href="https://www.webforwpress.ir/login.html">sing up</a>
+          </div>
+          <a class="px-2 mx-auto  xl:text-[1.1rem] font-bold pt-4" routerLink="/login">log in</a>
+        </div>
+      </a>
+    </div>
+    <!-- end login  -->
+
+
+
+
+    <!--    start dark mode     -->
+    <div class="switch-theme hidden lg:flex items-center justify-center w-14 h-14 rounded-full bg-gray-100 dark:bg-transparent text-slate-500 dark:text-gray-600 dark:border dark:border-gray-700 cursor-pointer hover:bg-gray-200 dark:hover:border-gray-600 transition-colors">
+      <svg class="hidden dark:inline-block w-7 h-7 ml-2 mt-2">
+        <svg   xmlns="http://www.w3.org/2000/svg" class="" width="19" height="19" fill="currentColor" viewBox="0 0 16 16"><path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"></path><path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"></path></svg>            </svg>
+      <svg class="dark:hidden w-7 h-7">
+      </svg>
+    </div>
+    <!--     end dark mode     -->
+
+
+
+    <!--start search box -->
+    <div class="relative group hidden  lg:block" id="searchbox">
+      <form class="hidden xl:block" action="https://webforwpress.ir/" method="get">
+        <label class="relative h-14 block transition-all">
+          <input class="rounded-full  bg-gray-500  dark:focus:text-white text-slate-500 dark:text-gray-600 placeholder:text-slate-500 dark:placeholder-gray-600 w-48 focus:w-64 h-full border border-transparent hover:border-gray-200 dark:border-gray-700 focus:text-zinc-700 dark:focus:border-gray-600 bg-gray-100 dark:bg-gray text-base placeholder:text-lg pl-24 pr-5 block transition-all" name="s" type="text" placeholder="search">
+          <button class="absolute left-5 top-0 bottom-0 w-7 h-7 my-auto text-slate-500 dark:text-gray-600" type="submit" role="button">
+            <svg class="text-dark-550 dark:text-white" width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="7.82495" cy="7.82492" r="6.74142" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></circle>
+              <path d="M12.5137 12.8638L15.1568 15.4999" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+          </button>
+        </label>
+      </form>
+
+      <div class="block  xl:hidden">
+        <button class="w-[3.4rem] h-[3.4rem] rounded-full border border border-gray-700" onclick="openModal('modelConfirm')">
+        </button>
+      </div>
+
+    </div>
+    <!--end search box -->
+
+
+  </div>
+  <!--  end dark mode , search box , log in  -->
+
+
+
+
+  <!--  start navbar items like home , blog  -->
+  <nav class="flex justify-between items-center h-14">
+    <ul class="hidden lg:flex gap-x-5 text-base xl:text-lg">
+
+      <li class="relative group">
+        <a href="#" class="flex items-center gap-x-1.5 h-full text-[#A96400] font-bold group-hover:text-primary dark:hover:text-primary transition-colors"><svg class="text-slate-400" width="13" height="8" viewBox="0 0 13 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12.2466 1.81357C12.2466 2.09063 12.1407 2.36913 11.929 2.58091L6.89555 7.63898C6.69102 7.8435 6.41397 7.9581 6.12386 7.9581C5.8352 7.9581 5.55814 7.8435 5.35362 7.63898L0.317309 2.58091C-0.106252 2.1559 -0.106252 1.46834 0.32021 1.04333C0.746671 0.619768 1.43568 0.621218 1.85924 1.04623L6.12386 5.3297L10.3885 1.04623C10.812 0.621218 11.4996 0.619768 11.9261 1.04333C12.1407 1.25511 12.2466 1.53506 12.2466 1.81357Z" fill="currentColor" fill-opacity="0.9"></path>
+        </svg>
+          Home
+        </a>
+        <!-- Show When Hover - Submenu -->
+        <div class="invisible opacity-0 group-hover:visible group-hover:opacity-100 absolute right-0 top-full pt-1 xl:pt-4 transition-all z-10">
+          <div class="flex flex-col gap-y-5 w-64 bg-gray-700 shadow-light dark:shadow-none py-5 px-6 rounded-2xl text-lg text-right">
+            <a href="#" class="text-white">This is a test</a>
+            <a href="#" class="text-white">This is a test</a>
+            <a href="#" class="text-white">This is a test</a>
+            <a href="#" class="text-white">This is a test</a>
+            <a href="#" class="text-white">This is a test</a>
+            <a href="#" class="text-white">This is a test</a>
+            <a href="#" class="text-white">This is a test</a>
+            <a href="#" class="text-white">This is a test</a>
+            <a href="#" class="text-white">This is a test</a>
+          </div>
+        </div>
+      </li>
+
+
+
+
+
+
+      <li class="relative group">
+        <a href="#" class="flex items-center gap-x-1.5 h-full text-zinc-700 dark:text-white group-hover:text-primary dark:hover:text-primary transition-colors"><svg class="text-slate-400" width="13" height="8" viewBox="0 0 13 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12.2466 1.81357C12.2466 2.09063 12.1407 2.36913 11.929 2.58091L6.89555 7.63898C6.69102 7.8435 6.41397 7.9581 6.12386 7.9581C5.8352 7.9581 5.55814 7.8435 5.35362 7.63898L0.317309 2.58091C-0.106252 2.1559 -0.106252 1.46834 0.32021 1.04333C0.746671 0.619768 1.43568 0.621218 1.85924 1.04623L6.12386 5.3297L10.3885 1.04623C10.812 0.621218 11.4996 0.619768 11.9261 1.04333C12.1407 1.25511 12.2466 1.53506 12.2466 1.81357Z" fill="currentColor" fill-opacity="0.9"></path>
+        </svg>
+          Trainings
+        </a>
+        <!-- Show When Hover - Submenu -->
+        <div class="invisible opacity-0 group-hover:visible group-hover:opacity-100 absolute right-0 top-full pt-1 xl:pt-4 transition-all z-10">
+          <div class="flex flex-col gap-y-5 w-64 bg-gray-700 shadow-light dark:shadow-none py-5 px-6 rounded-2xl text-lg text-right">
+            <a href="#" class="text-white">This is a test</a>
+            <a href="#" class="text-white">This is a test</a>
+            <a href="#" class="text-white">This is a test</a>
+            <a href="#" class="text-white">This is a test</a>
+            <a href="#" class="text-white">This is a test</a>
+            <a href="#" class="text-white">This is a test</a>
+            <a href="#" class="text-white">This is a test</a>
+            <a href="#" class="text-white">This is a test</a>
+            <a href="#" class="text-white">This is a test</a>
+          </div>
+        </div>
+      </li>
+
+
+
+
+      <li class="relative group">
+        <a href="#" class="flex items-center gap-x-1.5 h-full text-zinc-700 dark:text-white group-hover:text-primary dark:hover:text-primary transition-colors"><svg class="text-slate-400" width="13" height="8" viewBox="0 0 13 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12.2466 1.81357C12.2466 2.09063 12.1407 2.36913 11.929 2.58091L6.89555 7.63898C6.69102 7.8435 6.41397 7.9581 6.12386 7.9581C5.8352 7.9581 5.55814 7.8435 5.35362 7.63898L0.317309 2.58091C-0.106252 2.1559 -0.106252 1.46834 0.32021 1.04333C0.746671 0.619768 1.43568 0.621218 1.85924 1.04623L6.12386 5.3297L10.3885 1.04623C10.812 0.621218 11.4996 0.619768 11.9261 1.04333C12.1407 1.25511 12.2466 1.53506 12.2466 1.81357Z" fill="currentColor" fill-opacity="0.9"></path>
+        </svg>
+          Products
+        </a>
+        <!-- Show When Hover - Submenu -->
+        <div class="invisible opacity-0 group-hover:visible group-hover:opacity-100 absolute right-0 top-full pt-1 xl:pt-4 transition-all z-10">
+          <div class="flex flex-col gap-y-5 w-64 bg-gray-700 shadow-light dark:shadow-none py-5 px-6 rounded-2xl text-lg text-right">
+            <a href="#" class="text-white">This is a test</a>
+            <a href="#" class="text-white">This is a test</a>
+            <a href="#" class="text-white">This is a test</a>
+            <a href="#" class="text-white">This is a test</a>
+            <a href="#" class="text-white">This is a test</a>
+            <a href="#" class="text-white">This is a test</a>
+            <a href="#" class="text-white">This is a test</a>
+            <a href="#" class="text-white">This is a test</a>
+            <a href="#" class="text-white">This is a test</a>
+          </div>
+        </div>
+      </li>
+
+
+
+
+
+      <li class="relative group">
+        <a href="#" class="flex items-center gap-x-1.5 h-full text-zinc-700 dark:text-white group-hover:text-primary dark:hover:text-primary transition-colors"><svg class="text-slate-400" width="13" height="8" viewBox="0 0 13 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12.2466 1.81357C12.2466 2.09063 12.1407 2.36913 11.929 2.58091L6.89555 7.63898C6.69102 7.8435 6.41397 7.9581 6.12386 7.9581C5.8352 7.9581 5.55814 7.8435 5.35362 7.63898L0.317309 2.58091C-0.106252 2.1559 -0.106252 1.46834 0.32021 1.04333C0.746671 0.619768 1.43568 0.621218 1.85924 1.04623L6.12386 5.3297L10.3885 1.04623C10.812 0.621218 11.4996 0.619768 11.9261 1.04333C12.1407 1.25511 12.2466 1.53506 12.2466 1.81357Z" fill="currentColor" fill-opacity="0.9"></path>
+        </svg>
+          Blog
+        </a>
+        <!-- Show When Hover - Submenu -->
+        <div class="invisible opacity-0 group-hover:visible group-hover:opacity-100 absolute right-0 top-full pt-1 xl:pt-4 transition-all z-10">
+          <div class="flex flex-col gap-y-5 w-64 bg-gray-700 shadow-light dark:shadow-none py-5 px-6 rounded-2xl text-lg text-right">
+            <a href="#" class="text-white">This is a test</a>
+            <a href="#" class="text-white">This is a test</a>
+            <a href="#" class="text-white">This is a test</a>
+            <a href="#" class="text-white">This is a test</a>
+            <a href="#" class="text-white">This is a test</a>
+            <a href="#" class="text-white">This is a test</a>
+            <a href="#" class="text-white">This is a test</a>
+            <a href="#" class="text-white">This is a test</a>
+            <a href="#" class="text-white">This is a test</a>
+          </div>
+        </div>
+      </li>
+
+
+
+      <li class="relative group">
+        <a href="#" class="flex items-center gap-x-1.5 h-full text-zinc-700 dark:text-white group-hover:text-primary dark:hover:text-primary transition-colors"><svg class="text-slate-400 " width="13" height="8" viewBox="0 0 13 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12.2466 1.81357C12.2466 2.09063 12.1407 2.36913 11.929 2.58091L6.89555 7.63898C6.69102 7.8435 6.41397 7.9581 6.12386 7.9581C5.8352 7.9581 5.55814 7.8435 5.35362 7.63898L0.317309 2.58091C-0.106252 2.1559 -0.106252 1.46834 0.32021 1.04333C0.746671 0.619768 1.43568 0.621218 1.85924 1.04623L6.12386 5.3297L10.3885 1.04623C10.812 0.621218 11.4996 0.619768 11.9261 1.04333C12.1407 1.25511 12.2466 1.53506 12.2466 1.81357Z" fill="currentColor" fill-opacity="0.9"></path>
+        </svg>
+          articles
+        </a>
+        <!-- Show When Hover - Submenu -->
+        <div class="invisible opacity-0 group-hover:visible group-hover:opacity-100 absolute right-0 top-full pt-1 xl:pt-4 transition-all z-10">
+          <div class="flex flex-col gap-y-5 w-64 bg-gray-700 shadow-light dark:shadow-none py-5 px-6 rounded-2xl text-lg text-right">
+            <a href="#" class="text-white">This is a test</a>
+            <a href="#" class="text-white">This is a test</a>
+            <a href="#" class="text-white">This is a test</a>
+            <a href="#" class="text-white">This is a test</a>
+            <a href="#" class="text-white">This is a test</a>
+            <a href="#" class="text-white">This is a test</a>
+            <a href="#" class="text-white">This is a test</a>
+            <a href="#" class="text-white">This is a test</a>
+            <a href="#" class="text-white">This is a test</a>
+          </div>
+        </div>
+      </li>
+
+
+      <li class="relative group">
+        <a href="#" class="flex items-center gap-x-1.5 h-full text-zinc-700 dark:text-white group-hover:text-primary dark:hover:text-primary transition-colors"><svg class="text-slate-400 " width="13" height="8" viewBox="0 0 13 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12.2466 1.81357C12.2466 2.09063 12.1407 2.36913 11.929 2.58091L6.89555 7.63898C6.69102 7.8435 6.41397 7.9581 6.12386 7.9581C5.8352 7.9581 5.55814 7.8435 5.35362 7.63898L0.317309 2.58091C-0.106252 2.1559 -0.106252 1.46834 0.32021 1.04333C0.746671 0.619768 1.43568 0.621218 1.85924 1.04623L6.12386 5.3297L10.3885 1.04623C10.812 0.621218 11.4996 0.619768 11.9261 1.04333C12.1407 1.25511 12.2466 1.53506 12.2466 1.81357Z" fill="currentColor" fill-opacity="0.9"></path>
+        </svg>
+          Contact us
+        </a>
+        <!-- Show When Hover - Submenu -->
+        <div class="invisible opacity-0 group-hover:visible group-hover:opacity-100 absolute right-0 top-full pt-1 xl:pt-4 transition-all z-10">
+          <div class="flex flex-col gap-y-5 w-64 bg-gray-700 shadow-light dark:shadow-none py-5 px-6 rounded-2xl text-lg text-right">
+            <a href="#" class="text-white">This is a test</a>
+            <a href="#" class="text-white">This is a test</a>
+            <a href="#" class="text-white">This is a test</a>
+            <a href="#" class="text-white">This is a test</a>
+            <a href="#" class="text-white">This is a test</a>
+            <a href="#" class="text-white">This is a test</a>
+            <a href="#" class="text-white">This is a test</a>
+            <a href="#" class="text-white">This is a test</a>
+            <a href="#" class="text-white">This is a test</a>
+          </div>
+        </div>
+      </li>
+
+    </ul>
+    <!--start logo website-->
+    <div class="lg:pl-5 lg:ml-5 lg:border-l border-l-gray-100 dark:border-l-gray-700">
+      <a href="https://webforwpress.ir" class="block" title="سبز لرن">
+        <img src="https://sabzlearn.ir/wp-content/themes/sabzlearn-theme/images/logo.webp" class="w-16 md:w-[80px] lg:w-[95x]" alt="سبز لرن" loading="lazy">
+      </a>
+    </div>
+    <!--end logo website-->
+
+
+
+
+
+
+
+  </nav>
+  <!--  end navbar items like home , blog  -->
+
+
+
+
+
+  <!--start menu for mobile-->
+  <div class="block lg:hidden">
+    <div class="flex-1 flex flex-col overflow-hidden">
+      <div class=" shadow">
+        <div class="container mx-auto">
+          <div class="flex justify-between items-center py-4 px-2">
+            <button class="text-gray-500 hover:text-gray-600" id="open-sidebar">
+              <svg width="32" class="text-biscay-700 dark:text-white" height="22" viewBox="0 0 24 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2 2.5H21.5M2 9H21.5M2 15.5H21.5" stroke="currentColor" stroke-width="3.65625" stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--end menu for  mobile-->
+
+
+
+</header>
+
+
+<!-- start sidebar menu for mobile -->
+<div class=" flex overflow-hidden">
+  <div class="absolute w-56 min-h-screen  text-white bg-gray-800 rounded-r-[25px] border border-slate-600 overflow-y-auto transition-transform transform -translate-x-full ease-in-out duration-300" id="sidebar">
+    <!-- Your Sidebar Content -->
+    <div class="p-4">
+
+      <div class="text-center ">
+        <span class=" text-[2rem]">Logo</span>
+        <div class="border-b border-slate-400 mt-2 mb-8"></div>
+      </div>
+
+      <!-- start input search box -->
+      <div class="">
+        <div class="relative">
+          <input
+            class="appearance-none border-2 pl-10 border-gray-300 hover:border-gray-400 transition-colors rounded-md w-full py-2 px-3 text-gray-800 leading-tight focus:outline-none focus:ring-purple-600 focus:border-purple-600 focus:shadow-outline"
+            id="username"
+            type="text"
+            placeholder="Search..."
+          />
+          <div class="absolute right-0 inset-y-0 flex items-center">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="-ml-1 mr-3 h-5 w-5 text-gray-400 hover:text-gray-500"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </div>
+
+          <div class="absolute left-0 inset-y-0 flex items-center">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6 ml-3 text-gray-400 hover:text-gray-500"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+      <!-- start input search box -->
+
+
+
+
+
+      <ul class="mt-4">
+        <li class="mb-2"><a href="#" class="block hover:text-indigo-400">Home</a></li>
+        <li class="mb-2"><a href="#" class="block hover:text-indigo-400">About</a></li>
+        <li class="mb-2"><a href="#" class="block hover:text-indigo-400">Services</a></li>
+        <li class="mb-2"><a href="#" class="block hover:text-indigo-400">Contact</a></li>
+        <li class="mb-2"><a href="#" class="block hover:text-indigo-400">Contact</a></li>
+        <li class="mb-2"><a href="#" class="block hover:text-indigo-400">Contact</a></li>
+        <li class="mb-2"><a href="#" class="block hover:text-indigo-400">Contact</a></li>
+        <li class="mb-2"><a href="#" class="block hover:text-indigo-400">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<!-- end sidebar menu for mobile -->
