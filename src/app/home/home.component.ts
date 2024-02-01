@@ -4,6 +4,7 @@ import {FooterComponent} from "../footer/footer.component";
 import {MainComponent} from "../main/main.component";
 import {AboutComponent} from "../about/about.component";
 import {BlogComponent} from "../blog/blog.component";
+import {FormatComponent} from "../format/format.component";
 
 @Component({
   selector: 'app-home',
@@ -13,7 +14,8 @@ import {BlogComponent} from "../blog/blog.component";
         FooterComponent,
         MainComponent,
         AboutComponent,
-        BlogComponent
+        BlogComponent,
+        FormatComponent
     ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
